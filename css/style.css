@@ -79,6 +79,7 @@ p {
 
 /* видалення крапок */
 .list {
+ 
   list-style: none;
   text-decoration: none;
   padding: 0;
@@ -133,11 +134,21 @@ p {
 
 /* hero */
 .hero {
-  background-color: var(--black-text-color);
-  text-align: center;
+  display: block;
+   text-align: center;
   padding-top: 192px;
   padding-bottom: 192px;
+    background-color: var(--black-text-color);
+    max-width: 1600px;
+    max-height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient( rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4) ), url(../images/people-office\ 1.jpg);background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  
 }
+
 
 .hero-title {
   margin-top: 0;
@@ -194,6 +205,38 @@ p {
 
 /* team list */
 
+.features-list .item::before { 
+ display:block;
+content: "";
+width: 264;
+height: 112px;
+background-color: var(--button-color);
+margin-bottom: 8px;
+}
+ .icon-antena::before {
+  background-image:url(../images/svg/antena.svg);
+background-position: center;
+background-repeat: no-repeat;
+ }
+
+
+ .icon-time::before {background-image:url(../images/svg/time.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.icon-diagram::before {background-image:url(../images/svg/diagram\ 1.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.icon-astronaut::before {background-image:url(../images/svg/astronaut\ 1.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
 .team-list {
   display: flex;
   flex-wrap: wrap;
@@ -201,7 +244,6 @@ p {
 }
 .team-list .item {
   margin-right: 24px;
-  display: flex;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -326,6 +368,21 @@ margin: 0;}
 
    
 }
+/* svg icon-------------- */
+.social-list {display: flex;
+  justify-content: space-between;}
+
+.social-list-item {
+  fill: #434455;
+  width: 40px;
+height: 40px;
+}
+
+.social-list-link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
 .title-list {
@@ -354,15 +411,39 @@ border-radius: 0px 0px 4px 4px;
   line-height: 1.5;
 }
 .contact-link {
-  text-decoration: none;
+  text-decoration: none;}
+
+
+/* customer */
+.list-customer{
+  display: flex;  gap: 20px;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+
 }
+.customer{ width: 168px;
+ height: 88px;
+}
+
+.customer-link{ 
+  display: flex;
+   border:1px solid var(--subtle-text-color) ;
+    fill: #434455;
+
+}
+.icon-logo{
+  width: 59px;
+    height: 47px;
+}
+
 /* footer */
 .footer {
   background-color: var(--black-text-color);
   padding-top: 100px;
   padding-bottom: 100px;
 }
-.footer-title {
+.footer-title { display: block;
   color: var(--button-color);
   margin-top: 16px;
   margin-bottom: 0;
