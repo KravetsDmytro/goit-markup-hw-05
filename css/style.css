@@ -179,6 +179,9 @@ p {
 }
 .button-hero:hover {
   background-color: var(--accent-color);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 4px;
 }
 .button-hero:focus {
   background-color: #404bbf;
@@ -208,37 +211,24 @@ p {
 
 /* team list */
 
-.features-list .item::before {
-  display: block;
-  content: "";
-  width: 264;
-  height: 112px;
+.card-content {
+  display: flex;
   background-color: var(--button-color);
+  width: 264px;
+  height: 112px;
   margin-bottom: 8px;
-}
-.icon-antena::before {
-  background-image: url(../images/svg/antena.svg);
-  background-position: center;
-  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
 }
 
-.icon-time::before {
-  background-image: url(../images/svg/time.svg);
-  background-position: center;
-  background-repeat: no-repeat;
+.card-icon {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
 }
 
-.icon-diagram::before {
-  background-image: url(../images/svg/diagram\ 1.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.icon-astronaut::before {
-  background-image: url(../images/svg/astronaut\ 1.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-}
 .team-list {
   display: flex;
   flex-wrap: wrap;
@@ -285,9 +275,13 @@ p {
 .button:hover {
   color: var(--button-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .button:focus {
   color: var(--button-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
   background-color: var(--accent-color);
 }
 
@@ -367,6 +361,9 @@ p {
   flex-basis: calc((100% - 48px) / 3);
   background: var(--body-color-white);
 }
+.flex-element:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
 /* svg icon-------------- */
 .social-list {
   display: flex;
@@ -375,7 +372,9 @@ p {
   margin-top: 12px;
 }
 
-.link-icons:hover{fill: currentColor ;}
+.link-icons:hover {
+  fill: currentColor;
+}
 
 .social-list-item {
   background-color: var(--accent-color);
@@ -431,14 +430,15 @@ p {
   border-radius: 4px;
   justify-content: center;
   align-items: center;
-  
 }
-.customer{ width: 168px;
-  height: 88px;}
+.customer {
+  width: 168px;
+  height: 88px;
+}
 
 .customer-link {
   display: flex;
-  color:var(--subtle-text-color);
+  color: var(--subtle-text-color);
   box-sizing: border-box;
   border: 1px solid var(--subtle-text-color);
   border-radius: 4px;
@@ -446,30 +446,29 @@ p {
   align-items: center;
   width: 100%;
   height: 100%;
- 
 }
 .icon-logo {
   width: 104px;
   height: 56px;
-  fill:currentColor;
+  fill: currentColor;
 }
 
-.customer-link:focus, 
-.customer-link:hover
-{color:var(--accent-color);
-border:1px solid #4D5AE5;}
+.customer-link:focus,
+.customer-link:hover {
+  color: var(--accent-color);
+  border: 1px solid #4d5ae5;
+}
 
 /* footer */
 .footer {
   background-color: var(--black-text-color);
   padding-top: 100px;
   padding-bottom: 100px;
-
 }
 
-.footre-text{
-display: flex;
-gap: 120px;
+.footre-text {
+  display: flex;
+  gap: 120px;
 }
 .footer-title {
   display: block;
@@ -478,10 +477,11 @@ gap: 120px;
   margin-bottom: 0;
 }
 .footer-subtitle {
-padding-bottom: 16px;
-color: var(--background-color-fon);}
+  padding-bottom: 16px;
+  color: var(--background-color-fon);
+}
 
-.footer-list{
+.footer-list {
   display: flex;
   gap: 16px;
 }
@@ -498,10 +498,10 @@ color: var(--background-color-fon);}
   justify-content: center;
   align-items: center;
   fill: var(--body-color-white);
-  padding: 12px;}
+  padding: 12px;
+}
 
-  .footer-list-item:hover,
+.footer-list-item:hover,
 .footer-list-item:focus {
-	background-color: var(--green-color);}
-
-
+  background-color: var(--green-color);
+}
