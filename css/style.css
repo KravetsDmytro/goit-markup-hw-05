@@ -176,6 +176,9 @@ p {
   border-radius: 4px;
   padding: 16px 32px;
   border: none;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
 }
 .button-hero:hover {
   background-color: var(--accent-color);
@@ -270,6 +273,9 @@ p {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   padding: 8px 16px;
+  transition-property: background-color, color, box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
 }
 
 .button:hover {
@@ -305,18 +311,29 @@ p {
   display: block;
   padding-top: 20px;
   padding-bottom: 20px;
+
+
 }
 
 .contact-link {
   color: var(--title-text-color);
   text-decoration: none;
   margin-left: 40px;
+  transition-property: color;
+transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-link {
   color: var(--title-text-color);
-  text-decoration: none;
+  text-decoration: none;display: block;
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.portfolio-link:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
 .contact-link:hover {
   color: var(--accent-color);
 }
@@ -361,9 +378,7 @@ p {
   flex-basis: calc((100% - 48px) / 3);
   background: var(--body-color-white);
 }
-.portfolio-link:hover {
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
-}
+
 /* svg icon-------------- */
 .social-list {
   display: flex;
@@ -379,6 +394,9 @@ p {
 .social-list-item {
   background-color: var(--accent-color);
   border-radius: 50%;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
 }
 .social-list-item:hover{background-color: var(--green-color);}
 
@@ -450,6 +468,9 @@ p {
   align-items: center;
   width: 100%;
   height: 100%;
+  transition-property: color, border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
 }
 .icon-logo {
   width: 104px;
@@ -497,6 +518,9 @@ letter-spacing: 0.02em;
 .footer-list-item {
   background-color: var(--title-text-color);
   border-radius: 50%;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) ;
 }
 
 .footer-list-link {
