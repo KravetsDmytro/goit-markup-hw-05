@@ -13,6 +13,7 @@
   --subtle-text-color: #8e8f99;
   --green-color: #31d0aa;
   --background-btn:#E7E9FC;
+  --transition: 250ms  cubic-bezier(0.4, 0, 0.2, 1);
 }
 body {
   font-family: Roboto, sans-serif;
@@ -55,6 +56,11 @@ p {
 
 .header-nav {
   display: flex;
+}
+
+.header-nav-item{
+  display: flex;
+  position: relative;
 }
 
 .header-nav-item:not(:last-child) {
@@ -113,14 +119,41 @@ p {
 
 .list-link:hover {
   color: var(--title-text-color);
+
 }
+.list-link:focus::after,
+.list-link:hover::after{ opacity: 1;
+}
+
+
 .list-link:focus {
-  color: var(--accent-color);
+  color: var(--accent-color) ; 
 }
 
 .link:hover:focus {
   color: var(--accent-color);
 }
+/* підкреслення меню */
+.list-link::after{
+content: "";
+display: block;
+left:0;
+bottom: 0;
+width:100%;
+height: 4px;
+background-color: var(--accent-color);
+border-radius: 2px;
+position: absolute;
+opacity: 0;
+transition-property: opacity;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+
+
+
 /* приховати заголовок  */
 .visually-hidden {
   position: absolute;
@@ -582,10 +615,13 @@ letter-spacing: 0.02em;
   width: 100%;
   height: 100%;
   z-index: 100;
-
   background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity var(--transition), visibility var(--transition);
+  
+  
+   }
 
-}
+
 .modal{
   position: absolute;
   top: 50%;
@@ -594,8 +630,15 @@ letter-spacing: 0.02em;
   width: 408px;
   height: 576px;
   background-color: var(--body-color-white);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+border-radius: 4px;
+transition: box-shadow var(--transition);
+}
+.modal-close-btn:hover,
+.modal-close-btn:focus {box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 
 }
+
 .modal-close-btn{
   position: absolute;
   top: 24px;
@@ -611,4 +654,13 @@ letter-spacing: 0.02em;
   border-radius: 50%;
 
 }
+.backdrop.is-hidden{
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+
 /* =============модальне вікно ==========*/
+
+
