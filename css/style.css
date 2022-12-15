@@ -134,7 +134,7 @@ p {
   color: var(--accent-color);
 }
 /* підкреслення меню */
-.list-link::after{
+.curent::after{
 content: "";
 display: block;
 left:0;
@@ -144,7 +144,7 @@ height: 4px;
 background-color: var(--accent-color);
 border-radius: 2px;
 position: absolute;
-opacity: 0;
+
 transition-property: opacity;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
