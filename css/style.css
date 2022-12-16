@@ -386,13 +386,14 @@ overflow: hidden;
 
 .overley{
   position: absolute;
+  color: var(--body-color-white);
   width: 100%;
   height: 100%;
   overflow: auto;
   transform: translate(0, 100%);
   left: 0;
   top: 0;
-  background-color: rgba(77, 90, 229, 0.9);
+  background-color: rgba(77, 90, 229, 1);
   padding-left: 32px;
   padding-top: 40px;
   padding-right: 32px;
